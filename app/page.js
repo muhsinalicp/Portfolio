@@ -1,16 +1,24 @@
-import Image from "next/image";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import Preview from "./_components/Preview";
-import Test from "./_components/Test";
+import PixelTrail from "@/components/fancy/pixel-trail";
+import Nav from "./_components/Nav";
 
 export default function Home() {
+
   return (
-    <div>
-      <SpeedInsights />
-      <Analytics />
-      <h1 className="text-3xl font-bold underline">Home</h1>
-      <Test/>
+    <div className="w-full h-screen bg-black text-blue-900 text-center text-3xl flex flex-col font-azeretMono">
+      <div className="absolute inset-0 z-[0]">
+        <PixelTrail
+          pixelSize={'15'}
+          fadeDuration={500}
+          pixelClassName="bg-white z-0"
+
+        />
+        
+      </div>
+
+      <div className="z-10">
+      <Nav/>
+      </div>
+
     </div>
   );
 }
