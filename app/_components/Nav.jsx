@@ -1,37 +1,44 @@
 "use client"
 
 import ElasticLine from "@/components/fancy/elastic-line"
-import { motion } from "motion/react"
+import PixelTrail from "@/components/fancy/pixel-trail"
 import React from 'react'
 
 
+
+
 function Nav() {
-    const textVariants = {
-        hidden: { opacity: 0, y: 10 },
-        visible: (i) => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                delay: i * 0.3,
-                type: "spring",
-                stiffness: 300,
-                damping: 50,
-            },
-        }),
-    }
+
     return (
-        <div>
+        <div className="w-full relative ">
+
+        
+        <div className="relative top-[-4] z-20">
+        <PixelTrail
+          pixelSize={'15'}
+          fadeDuration={500}
+          pixelClassName="bg-white z-25"
+
+        />
         <ElasticLine
-          releaseThreshold={50}
-          strokeWidth={2}
+          releaseThreshold={60}
+          strokeWidth={1}
           animateInTransition={{
             type: "spring",
             stiffness: 300,
             damping: 30,
             delay: 0.15,
           }}
-          className={'text-white'}
+          className={'text-white z-0'}
         />
+        </div>
+        
+        <div className="flex w-full absolute top-2 py-2 px-4 justify-between">
+
+            <div className="text-white  text-2xl font-bold cursor-pointer hover:text-3xl">
+            &lt;muhsinali/&gt;
+            </div>
+        </div>
         </div>
     )
 }
