@@ -32,7 +32,7 @@ export default function Home() {
         <div className="h-[100vh] p-2 text-white">
           <Aboutme />
         </div>
-        <div className="h-[100vh] p-2 text-white">
+        <div className="lg:h-[100vh] p-2 text-white">
           <Services />
         </div>
       </div>

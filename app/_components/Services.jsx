@@ -21,11 +21,11 @@ function Services() {
             icon: <Origami size={30}/>
         },
         {
-            title: 'problem solving',
+            title: 'Technical Support',
             icon: <MessageCircleQuestion size={30}/>
         },
         {
-            title: 'Technical Feedback',
+            title: 'problem solving',
             icon: <ArrowBigUpDash size={40}/>
             
         }
@@ -44,7 +44,7 @@ function Services() {
             {service.map((item, index) => 
                 (<div key={item.title} className='w-full h-full  rounded-lg bg-zinc-950 lg:hover:bg-zinc-900 lg:hover:scale-105 lg:hover:cursor-pointer transition-all duration-300 '>
 
-                <div className='w-full h-fit  md:h-full   flex flex-col items-center justify-center gap-2'>
+                <div className='w-full h-fit py-8 lg:py-0  md:h-full   flex flex-col items-center justify-center gap-2'>
                 {item.icon}
                 {item.title}
                 </div>
