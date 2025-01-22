@@ -2,6 +2,8 @@ import PixelTrail from "@/components/fancy/pixel-trail";
 import Nav from "./_components/Nav";
 import { Doto } from "next/font/google";
 import Hero from "./_components/Hero";
+import Aboutme from "./_components/Aboutme";
+import Services from "./_components/Services";
 const doto = Doto({
   variable: "--font-doto",
   subsets: ["latin"],
@@ -26,6 +28,12 @@ export default function Home() {
         <Nav />
         <div className=" h-[84vh] p-2">
           <Hero />
+        </div>
+        <div className="h-[100vh] p-2 text-white">
+          <Aboutme />
+        </div>
+        <div className="h-[100vh] p-2 text-white">
+          <Services />
         </div>
       </div>
 
