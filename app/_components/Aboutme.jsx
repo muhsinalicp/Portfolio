@@ -1,8 +1,18 @@
+import PixelTrail from '@/components/fancy/pixel-trail'
 import React from 'react'
 
 function Aboutme() {
     return (
         <div className="w-full h-full flex  flex-col md:flex-row ">
+            <div className="absolute inset-0 z-[10]">
+                <PixelTrail
+                    pixelSize={'15'}
+                    fadeDuration={500}
+                    pixelClassName="bg-white z-25"
+
+                />
+
+            </div>
 
             <div className='p-5 h-fit w-full flex flex-col gap-2 justify-center items-center md:h-full text-white'>
                 <h1 className=" text-4xl font-bold  ">About Me</h1>
